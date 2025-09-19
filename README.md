@@ -7,6 +7,7 @@
 ## 3.2. User Stories
 
 | **Epic / Story ID** | **Título** | **Descripción** | **Criterios de Aceptación** | **Relacionado con (Epic ID)** |
+|--------|---------|-------------|--------|--------|
 | Epic-01 | Gestión de Envíos | Como administrador logístico, quiero registrar y gestionar envíos en un solo panel para reducir tiempos de operación. | –   | –   |
 | US-01.1 | Crear envío | Como administrador logístico, quiero crear una orden de envío con datos de remitente, destinatario, dirección, peso y costo para centralizar la gestión. | Given un usuario autenticado<br><br>When completa los datos requeridos y confirma<br><br>Then el sistema guarda la orden y genera un código único | Epic-01 |
 | US-01.2 | Guardar clientes frecuentes | Como administrador logístico, quiero guardar clientes y direcciones frecuentes para agilizar la creación de envíos. | Given un administrador que ha creado un envío<br><br>When selecciona guardar los datos de cliente<br><br>Then el sistema almacena los datos en una lista reutilizable | Epic-01 |
@@ -37,6 +38,7 @@
 ## 3.4. Product Backlog
 
 | **Órden** | **Story ID** | **Título** | **Descripción** | **Story Points** |
+|--------|---------|-------------|--------|--------|
 | 1   | US-01.1 | Crear envío | Como administrador logístico, quiero crear una orden de envío (remitente, destinatario, dirección, peso, costo) para centralizar la gestión. | 8   |
 | 2   | US-01.2 | Guardar clientes frecuentes | Como administrador logístico, quiero guardar clientes y direcciones frecuentes para agilizar la creación de envíos. | 5   |
 | 3   | US-02.1 | Ver estado del envío | Como administrador logístico, quiero consultar el estado de cada envío en un timeline estandarizado. | 5   |
