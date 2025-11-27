@@ -9,75 +9,96 @@
 | **Epic / Story ID** | **Título** | **Descripción** | **Criterios de Aceptación** | **Relacionado con (Epic ID)** |
 |--------|---------|-------------|--------|--------|
 | Epic-01 | Gestión de Envíos | Como administrador logístico, quiero gestionar envíos para reducir tiempos de operación. | – | – |
-| US-01.1 | Crear envío | Como administrador logístico, quiero crear una orden de envío con datos de remitente, destinatario, dirección, peso y costo para centralizar la gestión. | Given un usuario autenticado<br><br>When completa los datos requeridos y confirma<br><br>Then el sistema guarda la orden y genera un código único | Epic-01 |
-| US-01.2 | Guardar clientes frecuentes | Como administrador logístico, quiero guardar clientes y direcciones frecuentes para agilizar la creación de envíos. | Given un envío creado<br><br>When selecciona guardar los datos del cliente<br><br>Then el sistema almacena la información para reutilizarla | Epic-01 |
-| Epic-02 | Tracking Unificado | Como usuario, quiero visualizar el estado del envío para dar confianza al cliente final. | – | – |
-| US-02.1 | Ver estado del envío | Como administrador logístico, quiero consultar el estado de cada envío en un timeline estandarizado. | Given un envío con código válido<br><br>When el usuario realiza la consulta<br><br>Then el sistema muestra estado y timeline | Epic-02 |
-| US-02.2 | Consulta pública | Como consumidor final, quiero ingresar el código del envío para conocer su estado sin iniciar sesión. | Given un código<br><br>When lo ingresa en el buscador<br><br>Then el sistema muestra el estado actual | Epic-02 |
-| Epic-03 | Cotización | Como emprendedor, quiero comparar costos de envíos para elegir la mejor opción. | – | – |
-| US-03.1 | Cotizador | Como emprendedor, quiero ingresar peso y destino para cotizar tarifas disponibles. | Given un usuario<br><br>When ingresa peso y destino<br><br>Then el sistema muestra tarifas y tiempos | Epic-03 |
-| US-03.2 | Selección de courier | Como usuario, quiero elegir entre diferentes couriers sugeridos para optimizar costo/tiempo. | Given un listado de opciones<br><br>When selecciona un courier<br><br>Then el sistema asocia el envío al seleccionado | Epic-03 |
-| Epic-04 | Notificaciones | Como usuario, quiero recibir alertas automáticas del estado de mis envíos. | – | – |
-| US-04.1 | Notificación de retraso | Como administrador, quiero recibir alertas cuando un envío se retrase. | Given un envío retrasado<br><br>When se detecta<br><br>Then el sistema envía una notificación automática | Epic-04 |
-| US-04.2 | Confirmación de entrega | Como cliente final, quiero recibir una notificación cuando mi envío haya sido entregado. | Given un envío entregado<br><br>When el estado cambia<br><br>Then se envía notificación al cliente | Epic-04 |
-| Epic-05 | Reportes | Como administrador, quiero obtener reportes para mejorar decisiones. | – | – |
-| US-05.1 | Reportes de desempeño | Como administrador, quiero generar reportes de tiempos de entrega y costos. | Given un administrador autenticado<br><br>When selecciona rango de fechas<br><br>Then el sistema genera un reporte descargable | Epic-05 |
-| US-05.2 | Exportación de reportes | Como administrador, quiero exportar los reportes generados para compartirlos. | Given un reporte<br><br>When selecciona formato<br><br>Then el sistema descarga el archivo | Epic-05 |
-| Epic-06 | Landing Page | Como visitante, quiero conocer Sendify y registrarme fácilmente. | – | – |
-| US-06.1 | Información de la propuesta | Como visitante, quiero ver beneficios de Sendify para entender el valor de la plataforma. | Given un visitante<br><br>When accede a la landing<br><br>Then visualiza misión, visión y propuesta | Epic-06 |
-| US-06.2 | Registro inicial | Como visitante, quiero registrarme desde la landing page para comenzar a usar Sendify. | Given un visitante<br><br>When completa el formulario<br><br>Then el sistema crea una cuenta en el plan Free | Epic-06 |
-| Epic-07 | Autenticación | Como usuario, quiero ingresar de forma segura a mi cuenta. | – | – |
-| US-07.1 | Inicio de sesión | Como usuario, quiero iniciar sesión con mi correo y contraseña para acceder a mis envíos. | Given un usuario registrado<br><br>When ingresa sus credenciales<br><br>Then el sistema le permite ingresar | Epic-07 |
-| US-07.2 | Recuperación de contraseña | Como usuario, quiero recuperar mi contraseña si la olvido. | Given un usuario<br><br>When solicita recuperación<br><br>Then el sistema envía un enlace temporal | Epic-07 |
-| Epic-08 | Automatización | Como usuario, quiero automatizar acciones para ahorrar tiempo. | – | – |
-| US-08.1 | Etiquetas automáticas | Como administrador, quiero generar etiquetas PDF automáticamente al crear un envío. | Given un envío creado<br><br>When se confirma<br><br>Then el sistema genera la etiqueta | Epic-08 |
-| US-08.2 | Actualización automática | Como usuario, quiero que el estado de mis pedidos se actualice automáticamente. | Given un envío<br><br>When hay un cambio<br><br>Then el sistema lo refleja sin intervención manual | Epic-08 |
-| Epic-09 | Pagos | Como usuario, quiero pagar mis envíos dentro de la plataforma. | – | – |
-| US-09.1 | Pago por envío | Como usuario, quiero pagar con tarjeta o billetera digital. | Given un envío pendiente<br><br>When selecciona un método de pago<br><br>Then el sistema procesa la transacción | Epic-09 |
-| US-09.2 | Facturación automática | Como usuario, quiero recibir mi factura después de pagar. | Given un pago<br><br>When se completa<br><br>Then el sistema envía la factura PDF | Epic-09 |
-| Epic-10 | Soporte | Como usuario, quiero acceder a soporte para resolver problemas rápidamente. | – | – |
-| US-10.1 | Chat de soporte | Como usuario, quiero enviar consultas al chat de soporte. | Given un usuario<br><br>When abre el chat<br><br>Then puede escribir y recibir respuestas | Epic-10 |
-| US-10.2 | Base de conocimientos | Como visitante, quiero consultar artículos y guías sin contactar soporte. | Given un visitante<br><br>When accede a la base de conocimientos<br><br>Then puede leer artículos, tutoriales y FAQs | Epic-10 |
-| Epic-11 | Dashboard | Como administrador, quiero ver métricas clave del negocio. | – | – |
-| US-11.1 | Ver KPIs | Como administrador, quiero visualizar KPIs actualizados. | Given un admin<br><br>When ingresa al dashboard<br><br>Then ve métricas de entregas, tiempos y retrasos | Epic-11 |
-| US-11.2 | Panel de incidencias | Como admin, quiero ver incidencias para gestionarlas. | Given incidencias registradas<br><br>When ingresa al panel<br><br>Then ve detalle, severidad y estado | Epic-11 |
-| Epic-12 | Devoluciones | Como usuario, quiero gestionar devoluciones fácilmente. | – | – |
-| US-12.1 | Registrar devolución | Como usuario, quiero iniciar una solicitud de devolución. | Given un envío entregado<br><br>When solicita devolución<br><br>Then el sistema registra un RMA | Epic-12 |
-| US-12.2 | Tracking de devolución | Como usuario, quiero ver el estado de mi devolución. | Given una devolución<br><br>When consulta el código<br><br>Then el sistema muestra timeline del proceso | Epic-12 |
-
+| US-01.1 | Crear envío | Como administrador logístico, quiero crear una orden de envío con datos de remitente, destinatario, dirección, peso y costo. | Given usuario autenticado<br>When completa los datos<br>Then se genera código único | Epic-01 |
+| US-01.2 | Guardar clientes frecuentes | Como administrador, quiero guardar clientes frecuentes para agilizar futuros envíos. | Given envío creado<br>When selecciona guardar<br>Then sistema almacena cliente | Epic-01 |
+| TS-01.3 | Validación backend de órdenes | Implementar validaciones de formato, peso, costos y campos obligatorios en API interna. | Given payload<br>When se envía<br>Then backend valida esquema y reglas | Epic-01 |
+| Epic-02 | Tracking Unificado | Como usuario, quiero visualizar el estado de mi envío. | – | – |
+| US-02.1 | Ver estado del envío | Consultar timeline de estados. | Given código válido<br>When consulta<br>Then timeline visible | Epic-02 |
+| US-02.2 | Consulta pública | Cliente final consulta estado sin autenticación. | Given código<br>When lo ingresa<br>Then se muestra estado | Epic-02 |
+| TS-02.3 | Infraestructura para tracking | Crear microservicio de tracking con base de datos optimizada. | Given microservicio<br>When recibe consulta<br>Then responde en <200ms | Epic-02 |
+| Epic-03 | Cotización | Como emprendedor, quiero comparar tarifas. | – | – |
+| US-03.1 | Cotizador | Ingreso peso/destino y veo tarifas. | Given datos<br>When consulta<br>Then muestra tarifas | Epic-03 |
+| US-03.2 | Selección de courier | Elegir courier sugerido. | Given lista<br>When selecciona<br>Then se asigna courier | Epic-03 |
+| TS-03.3 | Integración con APIs de couriers | Conectar con APIs externas para obtener tarifas y tiempos. | Given request<br>When se consulta<br>Then obtiene datos reales | Epic-03 |
+| Epic-04 | Notificaciones | Como usuario, quiero recibir alertas. | – | – |
+| US-04.1 | Notificación de retraso | Administrador recibe alertas. | Given retraso<br>When detectado<br>Then envía alerta | Epic-04 |
+| US-04.2 | Confirmación de entrega | Cliente recibe confirmación. | Given entrega<br>When se actualiza<br>Then se notifica | Epic-04 |
+| TS-04.3 | Motor de notificaciones | Crear un servicio para email y WhatsApp. | Given evento<br>When se dispara<br>Then se envía notificación | Epic-04 |
+| Epic-05 | Reportes | Como administrador, quiero reportes. | – | – |
+| US-05.1 | Reportes de desempeño | Generar reportes descargables. | Given fechas<br>When consulta<br>Then genera reporte | Epic-05 |
+| US-05.2 | Exportación | Exportar en CSV/PDF. | Given reporte<br>When selecciona formato<br>Then descarga archivo | Epic-05 |
+| TS-05.3 | Motor de generación de PDF | Implementar generador PDF server-side. | Given datos<br>When exporta<br>Then genera PDF ligero | Epic-05 |
+| Epic-06 | Landing Page | Como visitante, quiero ver información de Sendify. | – | – |
+| US-06.1 | Información de la propuesta | Ver beneficios. | Given visitante<br>When accede<br>Then visualiza info | Epic-06 |
+| US-06.2 | Registro inicial | Registro desde la landing. | Given formulario<br>When lo completa<br>Then crea cuenta | Epic-06 |
+| TS-06.3 | Optimización SEO | Implementar SEO técnico para aumentar captación. | Given página<br>When indexada<br>Then mejora ranking | Epic-06 |
+| Epic-07 | Autenticación | Como usuario, quiero ingresar a mi cuenta. | – | – |
+| US-07.1 | Inicio de sesión | Login seguro. | Given credenciales<br>When válidas<br>Then accede | Epic-07 |
+| US-07.2 | Recuperación de contraseña | Recuperar acceso. | Given usuario<br>When solicita<br>Then recibe enlace | Epic-07 |
+| TS-07.3 | Autenticación JWT/Session | Implementar seguridad backend. | Given login<br>When autentica<br>Then genera token seguro | Epic-07 |
+| Epic-08 | Automatización | Como usuario, quiero automatizar acciones. | – | – |
+| US-08.1 | Etiquetas automáticas | Generar etiquetas PDF. | Given envío<br>When confirma<br>Then genera etiqueta | Epic-08 |
+| US-08.2 | Actualización automática | Estados se actualizan solos. | Given envío<br>When hay cambio<br>Then se refleja | Epic-08 |
+| TS-08.3 | Cron Jobs automáticos | Crear tareas periódicas para actualización de estados. | Given cron<br>When ejecuta<br>Then sincroniza estados | Epic-08 |
+| Epic-09 | Pagos | Como usuario, quiero pagar envíos. | – | – |
+| US-09.1 | Pago por envío | Pagar con tarjeta o billetera. | Given envío<br>When paga<br>Then procesa transacción | Epic-09 |
+| US-09.2 | Facturación automática | Recibir factura automática. | Given pago<br>When confirma<br>Then envía factura PDF | Epic-09 |
+| TS-09.3 | Integración con pasarela | Integración Stripe/NIUBiz. | Given transacción<br>When procesa<br>Then retorna estado | Epic-09 |
+| Epic-10 | Soporte | Como usuario, quiero soporte rápido. | – | – |
+| US-10.1 | Chat de soporte | Enviar consultas. | Given usuario<br>When abre chat<br>Then puede chatear | Epic-10 |
+| US-10.2 | Base de conocimientos | Consultar artículos. | Given visitante<br>When accede<br>Then lee FAQs | Epic-10 |
+| TS-10.3 | Integración chatbot IA | IA básica para respuestas automáticas. | Given pregunta<br>When IA responde<br>Then reduce tickets | Epic-10 |
+| Epic-11 | Dashboard | Como admin, quiero ver métricas. | – | – |
+| US-11.1 | Ver KPIs | Ver estadísticas. | Given admin<br>When accede<br>Then ve KPIs | Epic-11 |
+| US-11.2 | Panel de incidencias | Ver incidencias. | Given datos<br>When accede<br>Then visualiza panel | Epic-11 |
+| TS-11.3 | Motor analítico | Agregar agregaciones y cálculos backend. | Given datos<br>When consulta<br>Then retorna métricas | Epic-11 |
+| Epic-12 | Devoluciones | Como usuario, quiero gestionar devoluciones. | – | – |
+| US-12.1 | Registrar devolución | Iniciar solicitud. | Given entrega<br>When solicita<br>Then crea RMA | Epic-12 |
+| US-12.2 | Tracking devolución | Ver estado de devolución. | Given RMA<br>When consulta<br>Then muestra timeline | Epic-12 |
+| TS-12.3 | Sistema de RMA | Crear módulo técnico para devoluciones. | Given request<br>When procesa<br>Then registra y gestiona | Epic-12 |
 
 
 ## 3.3. Impact Mapping
 
-<img width="302" height="512" alt="user 1" src="https://github.com/user-attachments/assets/743854d6-1c1d-4c27-98ad-893d663c7371" />
+<img width="500" height="512" alt="user 1" src="https://github.com/user-attachments/assets/743854d6-1c1d-4c27-98ad-893d663c7371" />
 
 ## 3.4. Product Backlog
 
-| **ID**  | **User Story**                      | **Prioridad** | **Estimación (Story Points)** |
-| ------- | ----------------------------------- | ------------- | ----------------------------- |
-| US-01.1 | Crear envío                         | Alta          | 8                             |
-| US-01.2 | Guardar clientes frecuentes         | Media         | 5                             |
-| US-02.1 | Ver estado del envío                | Alta          | 8                             |
-| US-02.2 | Consulta pública de tracking        | Alta          | 5                             |
-| US-03.1 | Cotizador de tarifas                | Alta          | 8                             |
-| US-03.2 | Selección de courier                | Media         | 5                             |
-| US-04.1 | Notificación de retraso             | Alta          | 5                             |
-| US-04.2 | Confirmación de entrega             | Alta          | 3                             |
-| US-05.1 | Reportes de desempeño               | Media         | 8                             |
-| US-05.2 | Exportación de reportes             | Media         | 5                             |
-| US-06.1 | Información de la propuesta         | Media         | 3                             |
-| US-06.2 | Registro inicial                    | Alta          | 5                             |
-| US-07.1 | Inicio de sesión                    | Alta          | 5                             |
-| US-07.2 | Recuperación de contraseña          | Media         | 3                             |
-| US-08.1 | Etiquetas automáticas               | Media         | 8                             |
-| US-08.2 | Actualización automática del estado | Alta          | 5                             |
-| US-09.1 | Pago por envío                      | Alta          | 8                             |
-| US-09.2 | Facturación automática              | Alta          | 5                             |
-| US-10.1 | Chat de soporte                     | Media         | 5                             |
-| US-10.2 | Base de conocimientos               | Baja          | 3                             |
-| US-11.1 | Ver KPIs                            | Media         | 8                             |
-| US-11.2 | Panel de incidencias                | Media         | 5                             |
-| US-12.1 | Registrar devolución                | Media         | 5                             |
-| US-12.2 | Tracking de devolución              | Media         | 5                             |
-
-##
+| **ID** | **Story Title** | **Tipo** | **Prioridad** | **Story Points** |
+|--------|----------------|----------|---------------|------------------|
+| US-01.1 | Crear envío | Funcional | Alta | 8 |
+| US-01.2 | Guardar clientes frecuentes | Funcional | Media | 5 |
+| TS-01.3 | Validación backend de órdenes | Técnica | Alta | 5 |
+| US-02.1 | Ver estado del envío | Funcional | Alta | 8 |
+| US-02.2 | Consulta pública de tracking | Funcional | Alta | 5 |
+| TS-02.3 | Infraestructura de tracking | Técnica | Alta | 8 |
+| US-03.1 | Cotizador | Funcional | Alta | 8 |
+| US-03.2 | Selección de courier | Funcional | Media | 5 |
+| TS-03.3 | Integración APIs de couriers | Técnica | Alta | 13 |
+| US-04.1 | Notificación de retraso | Funcional | Alta | 5 |
+| US-04.2 | Confirmación de entrega | Funcional | Alta | 3 |
+| TS-04.3 | Motor de notificaciones | Técnica | Alta | 8 |
+| US-05.1 | Reportes de desempeño | Funcional | Media | 8 |
+| US-05.2 | Exportación | Funcional | Media | 5 |
+| TS-05.3 | Generación PDF backend | Técnica | Media | 5 |
+| US-06.1 | Información de la propuesta | Funcional | Baja | 3 |
+| US-06.2 | Registro inicial | Funcional | Alta | 5 |
+| TS-06.3 | SEO técnico | Técnica | Baja | 3 |
+| US-07.1 | Inicio de sesión | Funcional | Alta | 5 |
+| US-07.2 | Recuperación | Funcional | Media | 3 |
+| TS-07.3 | Autenticación segura | Técnica | Alta | 8 |
+| US-08.1 | Etiquetas PDF | Funcional | Media | 8 |
+| US-08.2 | Auto-actualización | Funcional | Alta | 5 |
+| TS-08.3 | Cron Jobs | Técnica | Alta | 5 |
+| US-09.1 | Pago por envío | Funcional | Alta | 8 |
+| US-09.2 | Facturación automática | Funcional | Alta | 5 |
+| TS-09.3 | Integración pasarela | Técnica | Alta | 13 |
+| US-10.1 | Chat de soporte | Funcional | Media | 5 |
+| US-10.2 | Base de conocimiento | Funcional | Baja | 3 |
+| TS-10.3 | Chatbot IA | Técnica | Media | 8 |
+| US-11.1 | KPIs | Funcional | Media | 8 |
+| US-11.2 | Panel incidencias | Funcional | Media | 5 |
+| TS-11.3 | Motor analítico | Técnica | Alta | 13 |
+| US-12.1 | Registrar devolución | Funcional | Media | 5 |
+| US-12.2 | Tracking de devolución | Funcional | Media | 5 |
+| TS-12.3 | Sistema RMA | Técnica | Alta | 8 |
